@@ -10,19 +10,21 @@ public class Tilt : MonoBehaviour
     public Vector3 currentRotation;
     private void Update()
     {
-        if (Input.GetAxis("Mouse X") > .2)
-        {
-            transform.Rotate(0, 0, speed * -1);           
-        }
-        if (Input.GetAxis("Mouse X") < -.2)
+        currentRotation = GetComponent<Transform>().eulerAngles;
+        
+        if ((Input.GetAxis("Mouse X") > .2) && (currentRotation.z <= 10 || currentRotation.z >= 348))
         {
             transform.Rotate(0, 0, speed * 1);           
         }
-        if (Input.GetAxis("Mouse Y") > .2)
+        if ((Input.GetAxis("Mouse X") < -.2) && (currentRotation.z >= 349 || currentRotation.z <= 11))
+        {
+            transform.Rotate(0, 0, speed * -1);           
+        }
+        if ((Input.GetAxis("Mouse Y") > .2) && (currentRotation.x <= 10 || currentRotation.x >= 348))
         {
             transform.Rotate(speed * 1, 0, 0);           
         }
-        if (Input.GetAxis("Mouse Y") < -.2)
+        if ((Input.GetAxis("Mouse Y") < -.2) && (currentRotation.x >= 349 || currentRotation.x <= 11))
         {
             transform.Rotate(speed * -1, 0, 0);           
         }
