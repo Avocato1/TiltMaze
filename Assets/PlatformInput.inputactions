@@ -1,0 +1,34 @@
+{
+    "name": "PlatformInput",
+    "maps": [
+        {
+            "name": "Input",
+            "id": "79709256-8d36-4130-a979-26c8b81fb8e9",
+            "actions": [
+                {
+                    "name": "Tilt",
+                    "type": "Value",
+                    "id": "b3f320bd-f683-4810-87ff-8895de317ad5",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fe05c552-af1e-46b3-84c9-87092edce335",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tilt",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
